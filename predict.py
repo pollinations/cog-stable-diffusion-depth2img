@@ -99,7 +99,7 @@ class Predictor(BasePredictor):
         generator = torch.Generator("cuda").manual_seed(seed)
 
         extra_kwargs = {
-            "image": Image.open(image).convert("RGB"),
+            "depth_map": Image.open(image).convert("RGB"),
             "strength": prompt_strength,
         }
 
